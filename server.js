@@ -3,12 +3,12 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const referralRoutes = require('./Route/route');
 const errorHandler = require('./middleware/errorHandler');
-const { PrismaClient } = require('@prisma/client'); // Import Prisma Client
+const { PrismaClient } = require('@prisma/client');
 const cors = require('cors');
 
 dotenv.config();
 
-const prisma = new PrismaClient(); // Initialize Prisma Client
+const prisma = new PrismaClient();
 
 const app = express();
 

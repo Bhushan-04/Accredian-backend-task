@@ -2,16 +2,15 @@ const nodemailer = require('nodemailer');
 
 const sendEmail = async (to, subject, text) => {
   try {
-    // Create a transporter using your Gmail account
+    
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.USER, // Your Gmail address
-        pass: process.env.PASS, // Your Gmail password or App Password
+        user: process.env.USER, 
+        pass: process.env.PASS, 
       },
     });
 
-    // Define email options
     const mailOptions = {
       from: "viniciijr@gmail.com",
       to,
@@ -19,7 +18,6 @@ const sendEmail = async (to, subject, text) => {
       text,
     };
 
-    // Send email
     const result = await transporter.sendMail(mailOptions);
     return result;
   } catch (error) {

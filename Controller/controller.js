@@ -32,9 +32,7 @@ const createReferral = async (req, res, next) => {
 function generateReferral(length) {
   const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   
-  // if (includeUppercase) {
   var characters = characters + uppercaseLetters;
-  // }
 
   let result = '';
   for (let i = 0; i < length; i++) {
